@@ -60,7 +60,7 @@ Run the app
 
 And visit
 
-    http://localhost:8080/getScore/Rafael/vs/Serena
+    http://localhost:8080/getScore/Rafael
 
 
 ----------

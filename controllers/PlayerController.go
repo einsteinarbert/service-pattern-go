@@ -16,8 +16,9 @@ type PlayerController struct {
 }
 
 /*
-	curl --location 'http://localhost:8080/add-user' \
-	--header 'Content-Type: application/json' \
+curl --location 'http://localhost:8080/add-user' \
+--header 'Content-Type: application/json' \
+
 	--data '{
 		"Name": "hieutt76",
 		"Score": 100
@@ -34,14 +35,12 @@ func (controller *PlayerController) AddUser(res http.ResponseWriter, req *http.R
 }
 
 func (controller *PlayerController) GetPlayerScore(res http.ResponseWriter, req *http.Request) {
-
 	player1Name := chi.URLParam(req, "player1")
-	player2Name := chi.URLParam(req, "player2")
 
-	scores, err := controller.GetScores(player1Name, player2Name)
+	scores, err := controller.GetScores(player1Name)
 	if err != nil {
 		//Handle error
 	}
 
-	json.NewEncoder(res).Encode(viewmodels.ScoresVM{scores})
+	json.NewEncoder(res).Encode(viewmodels.ScoresVM{Players: scores})
 }

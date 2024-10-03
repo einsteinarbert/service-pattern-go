@@ -1,5 +1,7 @@
 package viewmodels
 
+import "service-pattern-go/models"
+
 type ScoresVM struct {
-  Score string
+  Players []models.PlayerModel
 }

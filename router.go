@@ -17,10 +17,10 @@ func (router *router) InitRouter() *chi.Mux {
 	playerController := ServiceContainer().InjectPlayerController()
 
 	r := chi.NewRouter()
-	r.HandleFunc("/getScore/{player1}/vs/{player2}", playerController.GetPlayerScore)
+	r.HandleFunc("/getScore/{player1}", playerController.GetPlayerScore)
 
 	// Thêm route mới
-    r.Post("/add-user", playerController.AddUser) // Định nghĩa route cho POST /add-user
+	r.Post("/add-user", playerController.AddUser) // Định nghĩa route cho POST /add-user
 	return r
 }
 
