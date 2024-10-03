@@ -15,6 +15,14 @@ type PlayerController struct {
 	interfaces.IPlayerService
 }
 
+/*
+	curl --location 'http://localhost:8080/add-user' \
+	--header 'Content-Type: application/json' \
+	--data '{
+		"Name": "hieutt76",
+		"Score": 100
+	}'
+*/
 func (controller *PlayerController) AddUser(res http.ResponseWriter, req *http.Request) {
 	var player dto.PlayerAddRequest
 	// Phân tích dữ liệu JSON từ Body của yêu cầu
