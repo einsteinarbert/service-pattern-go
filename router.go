@@ -19,6 +19,8 @@ func (router *router) InitRouter() *chi.Mux {
 	r := chi.NewRouter()
 	r.HandleFunc("/getScore/{player1}/vs/{player2}", playerController.GetPlayerScore)
 
+	// Thêm route mới
+    r.Post("/add-user", playerController.AddUser) // Định nghĩa route cho POST /add-user
 	return r
 }
 

@@ -12,8 +12,8 @@ github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LB
 github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe/go.mod h1:8vg3r2VgvsThLBIFL93Qb5yWzgyZWhEmBwUJWevAkK0=
 github.com/gopherjs/gopherjs v1.17.2 h1:fQnZVsXk8uxXIStYb0N4bGk7jeyTalG/wsZjQ25dO0g=
 github.com/gopherjs/gopherjs v1.17.2/go.mod h1:pRRIvn/QzFLrKfvEz3qUuEhtE/zLCWfreZ6J5gM2i+k=
-github.com/irahardianto/service-pattern-go v0.0.0-20181002133626-d2daa60062e5 h1:24N10nH9vD0yYVyQk2y21hXvrnMW/66gDkjZKdXILzE=
-github.com/irahardianto/service-pattern-go v0.0.0-20181002133626-d2daa60062e5/go.mod h1:vF33uvU9y1b/2AD37prXp9nksKVyH9aXXO70Lim0/2E=
+service-pattern-go v0.0.0-20181002133626-d2daa60062e5 h1:24N10nH9vD0yYVyQk2y21hXvrnMW/66gDkjZKdXILzE=
+service-pattern-go v0.0.0-20181002133626-d2daa60062e5/go.mod h1:vF33uvU9y1b/2AD37prXp9nksKVyH9aXXO70Lim0/2E=
 github.com/jinzhu/gorm v1.9.16 h1:+IyIjPEABKRpsu/F8OvDPy9fyQlgsg2luMV2ZIH5i5o=
 github.com/jinzhu/gorm v1.9.16/go.mod h1:G3LB3wezTOWM2ITLzPxEXgSkOXAntiLHS7UdBefADcs=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=

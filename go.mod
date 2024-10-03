@@ -5,7 +5,7 @@ go 1.22.2
 require (
 	github.com/afex/hystrix-go v0.0.0-20180502004556-fa1af6a1f4f5
 	github.com/go-chi/chi v1.5.5
-	github.com/irahardianto/service-pattern-go v0.0.0-20181002133626-d2daa60062e5
+	service-pattern-go v0.0.0-20181002133626-d2daa60062e5
 	github.com/jinzhu/gorm v1.9.16
 	github.com/stretchr/testify v1.9.0
 )

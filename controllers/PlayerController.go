@@ -2,16 +2,27 @@ package controllers
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
-
-	"github.com/irahardianto/service-pattern-go/interfaces"
+	"service-pattern-go/interfaces"
+	"service-pattern-go/models/dto"
+	"service-pattern-go/viewmodels"
 
 	"github.com/go-chi/chi"
-	"github.com/irahardianto/service-pattern-go/viewmodels"
 )
 
 type PlayerController struct {
 	interfaces.IPlayerService
+}
+
+func (controller *PlayerController) AddUser(res http.ResponseWriter, req *http.Request) {
+	var player dto.PlayerAddRequest
+	// Phân tích dữ liệu JSON từ Body của yêu cầu
+	if err := json.NewDecoder(req.Body).Decode(&player); err != nil {
+		http.Error(res, err.Error(), http.StatusBadRequest)
+		return
+	}
+	fmt.Printf("Request: %+v\n", player) // Using Printf for formatted output
 }
 
 func (controller *PlayerController) GetPlayerScore(res http.ResponseWriter, req *http.Request) {

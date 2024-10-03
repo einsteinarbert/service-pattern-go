@@ -1,7 +1,7 @@
 package interfaces
 
 import (
-	"github.com/irahardianto/service-pattern-go/models"
+	"service-pattern-go/models"
 )
 
 type IPlayerRepository interface {

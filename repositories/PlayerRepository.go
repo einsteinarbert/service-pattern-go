@@ -1,12 +1,14 @@
 package repositories
 
 import (
+	"service-pattern-go/interfaces"
+	"service-pattern-go/models"
+
 	"github.com/afex/hystrix-go/hystrix"
-	"github.com/irahardianto/service-pattern-go/interfaces"
-	"github.com/irahardianto/service-pattern-go/models"
+
+	"fmt"
 
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
-	"fmt"
 )
 
 type PlayerRepositoryWithCircuitBreaker struct {
@@ -40,7 +42,7 @@ type PlayerRepository struct {
 
 func (repository *PlayerRepository) GetPlayerByName(name string) (models.PlayerModel, error) {
 
-	row, err :=repository.Query(fmt.Sprintf("SELECT * FROM player_models WHERE name = '%s'", name))
+	row, err := repository.Query(fmt.Sprintf("SELECT * FROM player_models WHERE name = '%s'", name))
 	if err != nil {
 		return models.PlayerModel{}, err
 	}
