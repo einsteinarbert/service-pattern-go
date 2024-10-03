@@ -33,6 +33,8 @@ Clone the source
     git clone https://github.com/irahardianto/service-pattern-go
 
 Setup dependencies
+    go mod init service-pattern-go
+    go mod tidy
 
     go get -u github.com/go-chi/chi
     go get -u github.com/jinzhu/gorm
